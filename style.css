@@ -1,0 +1,176 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #171818;
+    color: #1560eb; 
+   
+}
+
+header {
+   background-color: red;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #1d1b1c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.search-bar {
+    margin: 20px auto;
+    width: 50%; 
+    
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black,white;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: transparent;
+}
+.search-bar input::placeholder{
+    color: rgb(253, 230, 230);
+
+}
+
+.movie-list {
+    margin: 20px auto;
+    width: 80%; 
+    text-align: center;
+    
+
+}
+
+
+.movie-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+
+}
+
+.movie-card {
+    border: 1px solid #09fa2a;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #3a3b3a; 
+}
+
+.movie-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.movie-card h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.movie-card p {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #b80dce; 
+}
+
+.movie-card button {
+    background-color: #21b8f3; 
+    color: rgb(47, 9, 219);
+    padding: 10px 20px;
+    margin-top: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; 
+}
+
+.movie-card button:hover {
+    background-color: #1976D2; 
+}
+
+#videoPlayer{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+}
+#videoPlayer video {
+    height: 100%;
+    width: 100%;
+
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.controls button {
+    margin-right: 10px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2196F3;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #1976D2;
+}
+
+.controls input[type="range"] {
+    width: 200px;
+    margin-right: 10px;
+}
+
+
+.graph {
+    width: 300px;
+    height: 200px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+}
+
+.graph-bar {
+    width: 50px;
+    height: 100px;
+    background-color: #2196F3; 
+    margin: 10px;
+    border-radius: 5px; 
+}
+
+.graph-label {
+    text-align: center;
+    font-size: 0.8em;
+    color: #555; 
+}

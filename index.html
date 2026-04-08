@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyTube - Watch Videos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>MyTube</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#signup">Sign Up</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="home">
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search videos...">
+        </div>
+
+        <section class="movie-list">
+            <h2>Feature Video</h2>
+            <div class="movie-container" id="movieContainer">
+               
+            </div>
+        </section>
+    </main>
+
+    <!-- <section id="signup">
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+            <button type="submit">Sign Up</button>
+        </form>
+    </section> -->
+
+    <!-- <section id="login">         
+        <h2>Login</h2>
+        <form id="loginForm">
+            <button type="submit">Login</button>
+        </form>
+    </section> -->
+
+    <div id="videoPlayer" style="display: none;">
+        <video id="myVideo" width="640" height="360" controls>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="controls">
+            <button id="playBtn">Play</button>
+            <button id="pauseBtn">Pause</button>
+            <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
