@@ -269,6 +269,13 @@ For issues or questions, check:
 
 ISC
 
+### Author
+
+- **Name:** Prajwal Khot
+- **Email:** [prajwalkhot39@gmail.com]
+- **GitHub:** [@prajwalkho](https://github.com/prajwalkho)
+- **LinkedIn:** [www.linkedin.com/in/prajwal-p-khot]
+  
 ---
 
 **Last Updated**: 2026-04-08  
