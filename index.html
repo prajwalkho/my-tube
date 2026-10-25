@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f0f0f">
+  <meta name="description" content="Browse and watch the MyTube video library.">
+  <link rel="icon" type="image/png" href="photo/mytube-logo.png">
+  <title>MyTube — Discover videos</title>
+  <link rel="stylesheet" href="style.css?v=20261025-index">
+  <script src="script.js?v=20261025-index" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-start">
+      <button class="icon-button menu-button" id="menuButton" type="button" aria-label="Toggle navigation" aria-controls="sidebar" aria-expanded="true">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <a class="brand" id="brandHome" href="#home" aria-label="MyTube home"><img class="brand-logo" src="photo/mytube-logo.png" alt=""><span>MyTube</span></a>
+    </div>
+    <form class="search" id="searchForm" role="search">
+      <label class="visually-hidden" for="searchInput">Search videos</label>
+      <input id="searchInput" type="search" placeholder="Search videos" autocomplete="off">
+      <button type="submit" aria-label="Search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button>
+    </form>
+    <div class="topbar-end"><span class="collection-label"><span class="live-dot"></span> Local video library</span></div>
+  </header>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <nav class="side-nav">
+        <button class="nav-item active" type="button" data-view="home"><span class="nav-icon" aria-hidden="true">⌂</span><span>Home</span></button>
+        <div class="nav-divider"></div>
+        <p class="sidebar-heading">You <span aria-hidden="true">›</span></p>
+        <button class="nav-item" type="button" data-view="library"><span class="nav-icon" aria-hidden="true">▣</span><span>Library</span></button>
+        <button class="nav-item" type="button" data-view="favorites"><span class="nav-icon" aria-hidden="true">♡</span><span>Favorites</span></button>
+        <button class="nav-item" type="button" data-view="history"><span class="nav-icon" aria-hidden="true">◷</span><span>History</span></button>
+        <div class="nav-divider"></div>
+        <p class="sidebar-note" id="storageNotice" aria-live="polite">Favorites and watch history are saved in this browser only.</p>
+      </nav>
+      <div class="sidebar-footer">MyTube · A personal video library</div>
+    </aside>
+
+    <main class="main-content">
+      <section id="browseView" aria-labelledby="pageTitle">
+        <div class="page-heading"><div><p class="eyebrow">YOUR VIDEO LIBRARY</p><h1 id="pageTitle">Discover</h1></div><div class="heading-actions"><p class="video-count" id="videoCount" aria-live="polite"></p><button class="clear-history-button" id="clearHistoryButton" type="button" hidden>Clear history</button></div></div>
+        <div class="filter-row" role="group" aria-label="Filter videos by topic">
+          <button class="filter-chip selected" type="button" data-category="All">All</button>
+          <button class="filter-chip" type="button" data-category="Programming">Programming</button>
+          <button class="filter-chip" type="button" data-category="Web development">Web development</button>
+          <button class="filter-chip" type="button" data-category="PC building">PC building</button>
+        </div>
+        <div class="library-tools" id="libraryTools"><label for="sortSelect">Sort by</label><select id="sortSelect"><option value="recent">Featured order</option><option value="title">Title A–Z</option><option value="duration" disabled>Duration (available after viewing)</option></select></div>
+        <div class="video-grid" id="movieContainer" aria-live="polite"></div>
+        <div class="empty-state" id="emptyState" hidden><span class="empty-icon" aria-hidden="true">⌕</span><h2 id="emptyTitle">No videos found</h2><p id="emptyMessage">Try a different search or topic.</p><button type="button" class="text-button" id="clearSearch">Clear search</button></div>
+      </section>
+
+      <section class="watch-view" id="watchView" aria-labelledby="watchTitle" hidden>
+        <button class="back-button" id="backButton" type="button"><span aria-hidden="true">←</span> Back to videos</button>
+        <div class="player-frame"><video id="myVideo" controls playsinline preload="metadata" poster=""><p>Your browser does not support HTML video. Please try a modern browser.</p></video><div class="player-loading" id="playerLoading" role="status" hidden>Loading video…</div><div class="player-error" id="playerError" role="status" hidden>This video could not be loaded. Check that its MP4 file is available.</div></div>
+        <div class="watch-details"><div><p class="eyebrow" id="watchCategory"></p><h1 id="watchTitle"></h1><p class="watch-description" id="watchDescription"></p></div><button class="watch-favorite-button" id="watchFavoriteButton" type="button" aria-pressed="false">♡ Add to Favorites</button></div>
+        <div class="watch-tools"><span id="speedControl"><label for="playbackSpeed">Playback speed</label> <select id="playbackSpeed" aria-label="Playback speed"><option value="0.5">0.5×</option><option value="0.75">0.75×</option><option value="1" selected>Normal</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option><option value="2">2×</option></select></span><span id="captionStatus" role="status">Captions are not available for this video.</span><span id="resumeStatus" role="status" hidden></span></div>
+        <section class="up-next" aria-labelledby="upNextTitle"><h2 id="upNextTitle">More to watch</h2><div class="up-next-grid" id="upNext"></div></section>
+      </section>
+      <footer class="page-footer">MyTube <span>•</span> Your videos, all in one place</footer>
+    </main>
+  </div>
+</body>
+</html>
