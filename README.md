@@ -2,7 +2,7 @@
 
 MyTube is a static, browser-only video library built with HTML, CSS, and vanilla JavaScript. It has no build step, backend, environment variables, or external dependencies.
 
-## Deploy to Vercel my-tube-lime.vercel.app.
+## Deploy to Vercel || (https://my-tube-lime.vercel.app/)
 
 Import this project folder as the project root, or run the Vercel CLI from this folder. Use these project settings:
 
